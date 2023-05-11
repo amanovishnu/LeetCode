@@ -18,4 +18,9 @@ class Solution:
         for ele in sentence:
             alpha_list[ord(ele)-97] = ele
         
-        return False if 0 in alpha_list else True
+        # return False if 0 in alpha_list else True
+
+        for ele in alpha_list:
+            if ele == 0:
+                return False
+        return True
