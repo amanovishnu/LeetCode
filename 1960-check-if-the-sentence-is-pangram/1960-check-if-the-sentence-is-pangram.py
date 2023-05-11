@@ -23,6 +23,8 @@ class Solution:
         #         return False
         # return True
  
-        return False if 0 in set(alpha_list) else True
+        # return False if 0 in set(alpha_list) else True
+        return False if 0 in alpha_list else True
+
 
  
