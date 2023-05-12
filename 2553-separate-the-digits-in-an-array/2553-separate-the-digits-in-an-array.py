@@ -14,6 +14,7 @@ class Solution:
         # return output
 
         output = []
-        for ele in nums:
-            output.extend([int(x) for x in str(ele)])
+        for num in nums:
+            # output.extend([int(x) for x in str(ele)])
+            output.extend([num if len(str(num))==1 else int(x) for x in str(num)])
         return output
