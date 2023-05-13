@@ -1,11 +1,20 @@
-class Solution:
-    def countBits(self, n: int) -> List[int]:
-        output = []
-        for i in range(n+1):
-            counter = 0
-            while(i!=0):
-                if i&1==1:
-                    counter+=1
-                i>>=1
-            output.append(counter)
-        return output
+class Solution {
+    
+    public static int Bits(int n){
+        int c=0;
+        while(n!=0){
+            c+=(n&1);
+            n=n>>1;
+        }
+        return c;
+    }
+    
+    public int[] countBits(int n) {
+		int[] output = new int[n+1];
+		for(int i=0;i<=n;i++){
+		    System.out.println("Value of i->"+i);
+		    output[i] = Bits(i);
+		}  
+        return output;        
+    }
+}
