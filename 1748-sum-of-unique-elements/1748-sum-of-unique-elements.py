@@ -1,6 +1,10 @@
 class Solution:
     def sumOfUnique(self, nums: List[int]) -> int:
         dict = {}
+        sum = 0
         for ele in nums:
-            dict[ele] = 1 if ele not in dict else dict.get(ele,0)+1
-        return sum([x for x in dict.keys() if dict[x] == 1])
+            dict[ele] = dict.get(ele,0)+1
+        for key in dict.keys():
+            if dict[key]==1:
+                sum+=key
+        return sum
