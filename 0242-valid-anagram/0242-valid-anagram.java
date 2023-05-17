@@ -4,10 +4,10 @@ class Solution {
 		    return false;
 		} else {
 		    int[] array = new int[26];
-		    for(char ch : s.toCharArray())
-		        array[ch-'a']++;
-		    for(char ch : t.toCharArray())
-		        array[ch-'a']--;
+		    for(int i=0; i<s.length(); i++)
+		         array[s.charAt(i)-'a']++;
+		    for(int i=0; i<s.length(); i++)
+		        array[t.charAt(i)-'a']--;
 		    for(int ele : array)
 		        if(ele != 0)
 		            return false;
