@@ -1,5 +1,6 @@
 class Solution {
     public char findTheDifference(String s, String t) {
+        // Using Bit Manipulation
 	    int output = 0;
 	    output ^= (int)t.charAt(t.length()-1);
 	    for(int i=0;i<s.length();i++) {
@@ -8,6 +9,7 @@ class Solution {
 	    }
 	    return (char)output;
         
+        // Using Arrays
         // int[] alpha = new int[26];
 	    // char res = Character.MIN_VALUE;
 	    // for(int i=0;i<s.length();i++)
