@@ -1,11 +1,13 @@
-class Solution:
-    def getConcatenation(self, nums: List[int]) -> List[int]:
-        num_len = len(nums)
-        output = [0]*2*num_len
-        for idx in range(num_len):
-            output[idx] = nums[idx]
-            output[idx+num_len] = nums[idx]
-        return output
-
-# Time Complexity: O(n)
-# Space Complexity: O(n)
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        int num_len = nums.length;
+        int[] output = new int[2*num_len];
+        for(int i=0; i<num_len; i++) {
+            output[i] = nums[i];
+            output[i+num_len] = nums[i];
+        }
+        return output;
+    }
+}
+// Time Complexity : O(n)
+// Space Complexity : O(n)
