@@ -3,9 +3,9 @@ class Solution:
         hash = dict()
         for idx in range(len(heights)):
             hash[heights[idx]] = names[idx]
-        sorted_heights = sorted(list(hash.keys()), reverse=True)
-        output = []
-        for height in sorted_heights:
-            output.append(hash.get(height))
-        return output
+        hash = sorted(hash.items(), reverse=True)
+        return [x[1] for x in hash]
+
+# Time Complexity : O(nlogn)
+# Space Complexity: O(n)
         
