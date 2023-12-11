@@ -1,13 +1,18 @@
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
-        value = arr[0]
-        max_frequency = 0
-        local_frequency = 0
-        for idx in range(len(arr)-1):
-            if arr[idx] != arr[idx+1]:
-                local_frequency = 0
-            local_frequency +=1
-            if local_frequency >= max_frequency:
-                max_frequency = local_frequency
-                value = arr[idx] if max_frequency >= ceil(len(arr)/4) else value
-        return value
+        
+        count_frequency = dict()
+        target = len(arr)/4
+
+        for ele in arr:
+            
+            if ele in count_frequency:
+                count_frequency[ele] += 1
+            else:
+                count_frequency[ele] = 1
+            
+            if count_frequency[ele] > target:
+                return ele
+        
+        return -1
+        
