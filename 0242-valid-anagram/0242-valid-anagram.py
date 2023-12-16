@@ -4,7 +4,7 @@ class Solution:
         if(len(s) != len(t)):
             return False
         else:
-            array = [0 for x in range(26)]
+            array : list = [0 for x in range(26)]
             for char in s:
                 array[ord(char)-97]+=1
             for char in t:
